@@ -1,5 +1,6 @@
 const Navigation=(props)=>{
     return (
+
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -9,8 +10,9 @@ const Navigation=(props)=>{
                 <li><a  href="/">Order Online</a></li>
                 <li><a href="/">Login</a></li>
             </ul>
-
         </nav>
+
+ 
     );
 }
 

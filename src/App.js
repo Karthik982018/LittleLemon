@@ -9,10 +9,13 @@ import Navigation from './components/navigation/navigation';
 function App() {
   return (
     <Fragment>
+      <main className='main-body'>
       <Header></Header>
       <Navigation></Navigation>
       <Main></Main>
       <Footer></Footer>
+      </main>
+
     </Fragment>
   );
 }
