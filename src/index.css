@@ -6,9 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
-  
- 
 }
 
 
@@ -16,55 +13,113 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.main-body{
-  display: grid;
-  grid-template-columns: repeat(2,50%);
-  grid-template-rows: 50px auto 50px;
-  grid-template-areas: "header nav " "main main";
-}
+/* header and navigation bar  */
 .header{
-  grid-area: header;
-  /* grid-column: 1/2; */
-
-  text-align: center
-
-
-}
-
-.navigation{
-  /* display: block; */
-
-  grid-area: nav;
-  
-
-
-}
-
-
-
-nav ul{
   display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  padding: 0px;
+  justify-content: center;
+  align-items: center;
 
-} 
-
-
-nav ul a{
-  text-decoration: none;
-  padding-right: 1rem;
-  font-weight: bold;
-  font-size: 1rem;
-  color: black;
 }
+
+.header nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.header li{
+
+  list-style: none;
+
+}
+.header a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+/* main */
 
 .main{
-  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "home";
+}
+
+article{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: auto auto;
+
+
 
 }
-article{
-  text-align: center;
+#home{
+  background-color: #495E57;
+  grid-area: home;
 }
+#description-home{
+
+  grid-area: 2/3/span 2/span 8;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+
+
+}
+
+#description-home h1{
+  font-size: 64pt;
+  font-family: 'Markazi Text', serif;
+  color: #f4ce14;
+  margin: 0;
+
+  
+}
+#description-home h3{
+  font-size: 40pt;
+  font-family: 'Markazi Text', serif;
+
+  
+}
+.description-text{
+  font-family: 'Karla', sans-serif;
+font-family: 'Markazi Text', serif;
+font-size: 18pt;
+}
+
+
+
+
+
+
+/* media  */
+
+/* header and navigation bar */
+
+@media (max-width:426px){
+  .header{
+    align-items: center;
+  }
+  .header nav ul{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+
+
+
+
+
 
 
