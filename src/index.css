@@ -54,6 +54,7 @@ article{
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: auto auto;
+  justify-content: center;
 
 
 
