@@ -11,10 +11,10 @@ const Home=()=>{
                         We are a family owned<br/> mediterranean restaurant,<br/>
                         focused on traditional <br/>recipesserved with a modern <br/> twist.
                     </p>
-                    <Button styles={{padding:8,borderRadius:16,color:"white" ,backgroundColor:"black"}} title="Reserve a table"></Button>
+                    <Button  title="Reserve a table"></Button>
                 </section>
 
-                <img id="restPhoto"src={restaturantfood}  alt="restaurant food" height={"300px"} width={"250px"} style={{borderRadius:16}}></img>
+                <img id="restPhoto"src={restaturantfood}  alt="restaurant food" height={"300px"} width={"250px"} style={{borderRadius:16,margin:"1rem"}}></img>
 
             </section>
 

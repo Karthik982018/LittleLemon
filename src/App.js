@@ -9,12 +9,9 @@ import Footer from './components/footer/footer';
 function App() {
   return (
     <Fragment>
-    
       <Header></Header>
       <Main></Main>
       <Footer></Footer>
-
-
     </Fragment>
   );
 }
