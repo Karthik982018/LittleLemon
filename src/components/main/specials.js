@@ -14,7 +14,7 @@ const Specials=()=>{
             <SpecialsHeader></SpecialsHeader>
             <section id="specialItems">
 
-                {specialDishes.map(items=> <SpecialItems {...items}></SpecialItems>)}
+                {specialDishes.map(items=> <SpecialItems {...items} key={items.name}></SpecialItems>)}
 
             </section>
         </article>
