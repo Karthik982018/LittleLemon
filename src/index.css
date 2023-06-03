@@ -18,6 +18,11 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: white;
 
 }
 
@@ -46,8 +51,10 @@ code {
 .main{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto auto auto 100px;
-  grid-template-areas: "home""specials""testimonials";
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "home""specials""testimonials""about""footer";
+
+  padding-top: 50px;
 }
 
 article{
@@ -151,6 +158,8 @@ font-size: 18pt;
 
 #testimonials{
   grid-area: testimonials;
+  padding-bottom: 3rem;
+
 }
 
 
@@ -174,6 +183,10 @@ font-size: 18pt;
 
 }
 
+.checked{
+  color: orange;
+}
+
 .reviewsCard{
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -181,12 +194,111 @@ font-size: 18pt;
   background-color: rgb(224, 224, 224);
   width: 250px;
 
-}
-#reviews img{
-  width: inherit;
-  height: 150px;
+  text-align: center;
+
+
 
 }
+#reviews img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+}
+
+/* about */
+
+
+#about{
+  background-color: #495E57;
+  grid-area: about;
+  padding-bottom: 100px;
+}
+
+#about_section{
+  grid-area: 1/3/span 2/span 8;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+
+}
+
+#about_section h1{
+  font-size: 64pt;
+  font-family: 'Markazi Text', serif;
+  color: #f4ce14;
+  margin: 0;
+
+}
+#about_section h3{
+  font-size: 40pt;
+  font-family: 'Markazi Text', serif;
+
+}
+.description-text{
+  font-family: 'Karla', sans-serif;
+font-size: 18pt;
+}
+
+
+/* footer */
+
+#footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white; */
+
+}
+
+/* reserve a table */
+#reservemain{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "resvHead""resvForm" ;
+  padding-top: 50px;
+
+}
+
+#resvhead{
+
+  background-color: #495E57;
+
+  grid-area: resvHead;
+}
+
+#resvheader{
+  grid-area: 1/3/span 2/span 8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#resvForm{
+  grid-area: resvForm;
+}
+
+#resvFormSection{
+
+  grid-area: 1/3/span 2/span 8;
+
+
+}
+
+
 
 /* general */
 
@@ -200,7 +312,16 @@ button{
   font-family: 'Karla', sans-serif;
   margin: 1rem;
 }
-
+button:hover{
+  transform: scale3d(1.2,1.2,1.2);
+  transition: all 1s;
+}
+img:hover{
+  transform: scale3d(1.5,1.5,1.5);
+  transition: all 2s;
+  border-radius: 16pt;
+  border: solid black 1px;
+}
 /* media  */
 
 /* media */
@@ -223,7 +344,13 @@ button{
 
     flex-direction: column; 
   }
+  #reviews{
+    flex-direction: column;
+  }
 
+  #about_section{
+    flex-direction: column;
+  }
 
 
 }

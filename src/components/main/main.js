@@ -1,3 +1,4 @@
+import About from "./about";
 import Home from "./home";
 import Specials from "./specials";
 import Tesimonials from "./testimonials";
@@ -8,6 +9,7 @@ const Main=(props)=>{
             <Home></Home>
             <Specials></Specials>
             <Tesimonials></Tesimonials>
+            <About></About>
         </main>
     );
 }
