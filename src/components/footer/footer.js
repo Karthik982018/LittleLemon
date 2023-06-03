@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import logo from "../../Assets/Logo.svg"
 const Footer=(props)=>{
     return (
@@ -8,13 +9,14 @@ const Footer=(props)=>{
             <img  src={logo} alt="logo"></img>
 
         </section>
+        <section id="footer_links">
         <section>
             <h3>Navigation</h3>
             <ul>
                 <li>Home</li>
                 <li>About</li>
                 <li>Menu</li>
-                <li>Reservations</li>
+                <li><Link to="reserve" >Reservations</Link></li>
                 <li>Order Online</li>
                 <li>Login</li>
             </ul>
@@ -34,11 +36,12 @@ const Footer=(props)=>{
 
             <h3>Social Media</h3>
             <ul>
-                <li>Facebook</li>
+                <li>Link Facebook</li>
                 <li>Instagram</li>
                 <li>Twitter</li>
             </ul>
 
+        </section>
         </section>
 
     </footer>
