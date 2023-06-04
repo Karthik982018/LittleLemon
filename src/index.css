@@ -154,12 +154,12 @@ font-size: 18pt;
 #specialItems{
 
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
   /* align-items: center; */
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
-  grid-area: 2/3/span 1/span 8;
+  grid-area: 2/2/span 1/span 10;
 
 }
 
@@ -191,12 +191,12 @@ font-size: 18pt;
 #reviews{
 
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
   /* align-items: center; */
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
-  grid-area: 2/3/span 1/span 8;
+  grid-area: 2/2/span 1/span 10;
 
 }
 
@@ -215,6 +215,13 @@ font-size: 18pt;
 
 
 
+}
+.reviewsCard p{
+  padding: 1rem;
+}
+
+.reviewsCard div{
+  padding: 1rem;
 }
 #reviews img{
   width: 200px;
@@ -405,7 +412,7 @@ text-align: justify;
 
 button{
   font-size:18pt;
-  padding:8;
+  padding:15px;
   border: none;
   border-radius:16pt;
   color:black;

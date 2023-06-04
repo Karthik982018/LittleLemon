@@ -9,7 +9,7 @@ const Main=(props)=>{
             <Home></Home>
             <Specials></Specials>
             <Tesimonials></Tesimonials>
-            <About></About>
+            {/* <About></About> */}
         </main>
     );
 }

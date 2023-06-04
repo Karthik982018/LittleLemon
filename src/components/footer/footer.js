@@ -36,7 +36,7 @@ const Footer=(props)=>{
 
             <h3>Social Media</h3>
             <ul>
-                <li>Link Facebook</li>
+                <li>Facebook</li>
                 <li>Instagram</li>
                 <li>Twitter</li>
             </ul>

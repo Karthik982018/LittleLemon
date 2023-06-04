@@ -8,7 +8,7 @@ const Navigation=(props)=>{
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/">About</Link> </li>
                 <li><Link to="/">Menu</Link></li>
-                <li><Link to="reserve">Reservations</Link></li>
+                <li><Link to="/">Reservations</Link></li>
                 <li><Link to="/">Order Online</Link></li>
                 <li><Link to="/">Login</Link></li>
             </ul>
