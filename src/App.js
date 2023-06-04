@@ -6,7 +6,7 @@ import Main from './components/main/main';
 import Footer from './components/footer/footer';
 
 import { Route,Routes } from 'react-router-dom';
-import TableBooking from './components/main/bookatable';
+import BookingPage from './components/main/bookingPage';
 // import Navigation from './components/navigation/navigation';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' Component={Main}></Route>
-        <Route path='/reserve' Component={TableBooking}></Route>
+        <Route path='/reserve' Component={BookingPage}></Route>
       
 
       </Routes>

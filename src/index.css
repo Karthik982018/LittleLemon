@@ -254,11 +254,9 @@ font-size: 18pt;
   justify-content: space-around;
   align-items: center;
   height: auto;
-  /* position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white; */
+  border-top: #495E57 2px solid;
+
+
 
 }
 #footer_links{
@@ -268,7 +266,7 @@ font-size: 18pt;
 }
 #footer_links h3{
   text-align: center;
-  padding: 2rem;
+  padding-left: 2rem ;
   
 }
 #footer_links ul li{
@@ -302,13 +300,73 @@ font-size: 18pt;
 
 #resvForm{
   grid-area: resvForm;
+  
 }
 
 #resvFormSection{
 
   grid-area: 1/3/span 2/span 8;
+  border: #495E57 solid 2px;
+  border-radius: 16pt;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
 
 
+}
+
+#revervation_form{
+  margin: 2rem;
+
+}
+
+#booking_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form_feild{
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form_feild label{
+  padding: 1rem;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  font-size: 18pt;
+}
+
+.form_feild input{
+  border: solid 1px #495E57;
+  padding: 1rem;
+  border-radius: 16pt;
+  width: 35vw;
+  box-sizing: content-box;
+  font-weight: bold;
+}
+
+.form_feild select{
+  border: solid 1px #495E57;
+  padding: 1rem;
+  border-radius: 16pt;
+  width: 35vw;
+  min-width: 200px;
+  box-sizing: content-box;
+  font-weight: bold;
+
+}
+#submit_button{
+  background-color: #f4ce14;
+  color: black;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  font-size: 18pt;
 }
 
 
@@ -329,12 +387,7 @@ button:hover{
   transform: scale3d(1.2,1.2,1.2);
   transition: all 1s;
 }
-img:hover{
-  transform: scale3d(1.5,1.5,1.5);
-  transition: all 2s;
-  border-radius: 16pt;
-  border: solid black 1px;
-}
+
 /* media  */
 
 /* media */
@@ -369,6 +422,10 @@ img:hover{
   }
 
   #footer_links{
+    flex-direction: column;
+  }
+
+  #resvheader{
     flex-direction: column;
   }
 

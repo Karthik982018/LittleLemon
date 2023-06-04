@@ -1,6 +1,6 @@
 
 import restaturantfood from "../../Assets/restauranfood.jpg"
-const ResvHeader=()=>{
+const BookingHeader=()=>{
     return (
         <article id="resvhead">
             <section id="resvheader">
@@ -24,4 +24,4 @@ const ResvHeader=()=>{
     )
 }
 
-export default ResvHeader
+export default BookingHeader
