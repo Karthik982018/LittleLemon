@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import {fetchAPI,submitAPI} from "../../utilities/fetchData"
+
 const BookingForm=()=>{
 
 
@@ -10,23 +12,41 @@ const BookingForm=()=>{
     const [time,setTime]=useState("17:00")
     const [guests,setGuests]=useState(1)
     const [occasion,setOccasion]=useState("Birthday")
-    const [submited,setSubmited]=useState(false)
+
+    const [availableTimes,setAvailableTimes]=useState([])
 
 
     useEffect(
         ()=>{
 
-            console.log(date)
-            console.log(time)
-            console.log(guests)
-            console.log(occasion)
+            initializeTimes()
 
-        },[date,time,occasion,guests,submited]
+        },[]
     )
+
+    useEffect(()=>{
+        updateTimes(new Date(date))
+    }
+
+    ,[date])
+
+
+
+     const initializeTimes=()=>{
+        const t=fetchAPI(new Date())
+        setAvailableTimes(t)
+
+     }
+
+     const updateTimes=(d)=>{
+        const t=fetchAPI(d)
+        setAvailableTimes(t)
+
+     }
 
     const submitHandler=(e)=>{
         e.preventDefault()
-        setSubmited(true)
+        submitAPI(e.target.value) 
    }
     return(
         <article id="resvForm">
@@ -39,12 +59,7 @@ const BookingForm=()=>{
                     <div className="form_feild">
                         <label htmlFor="res-time">Choose time</label>
                         <select id="res-time " value={time} onChange={(e)=>setTime(e.target.value)}>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
+                            {availableTimes.map(times=><option key={times}>{times}</option>)}
                         </select>
                     </div>
                     <div className="form_feild">
