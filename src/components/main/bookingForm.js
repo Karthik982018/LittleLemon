@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react"
 
-import {fetchAPI,submitAPI} from "../../utilities/fetchData"
+import {fetchAPI} from "../../utilities/fetchData"
 
-const BookingForm=()=>{
-
-
-
-
-
-    const [date,setDate]=useState("")
-    const [time,setTime]=useState("17:00")
-    const [guests,setGuests]=useState(1)
-    const [occasion,setOccasion]=useState("Birthday")
+const BookingForm=(props)=>{
 
     const [availableTimes,setAvailableTimes]=useState([])
+
+
+
+
+
+
 
 
     useEffect(
@@ -25,10 +22,10 @@ const BookingForm=()=>{
     )
 
     useEffect(()=>{
-        updateTimes(new Date(date))
+        updateTimes(new Date(props.date))
     }
 
-    ,[date])
+    ,[props.date])
 
 
 
@@ -46,7 +43,7 @@ const BookingForm=()=>{
 
     const submitHandler=(e)=>{
         e.preventDefault()
-        submitAPI(e.target.value) 
+        props.submitForm(e.target.value)
    }
     return(
         <article id="resvForm">
@@ -54,22 +51,22 @@ const BookingForm=()=>{
                 <form id="booking_form" onSubmit={submitHandler}>
                     <div className="form_feild">
                         <label htmlFor="res-date">Choose date</label>
-                        <input type="date" id="res-date" value={date} onChange={(e)=> setDate(e.target.value)}/>
+                        <input type="date" id="res-date" value={props.date} onChange={(e)=> props.setDate(e.target.value)}/>
                     </div>
                     <div className="form_feild">
                         <label htmlFor="res-time">Choose time</label>
-                        <select id="res-time " value={time} onChange={(e)=>setTime(e.target.value)}>
+                        <select id="res-time " value={props.time} onChange={(e)=>props.setTime(e.target.value)}>
                             {availableTimes.map(times=><option key={times}>{times}</option>)}
                         </select>
                     </div>
                     <div className="form_feild">
                         <label htmlFor="guests">Number of guests</label>
-                        <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e)=>setGuests(e.target.value)}/>
+                        <input type="number" placeholder="1" min="1" max="10" id="guests" value={props.guests} onChange={(e)=>props.setGuests(e.target.value)}/>
 
                     </div>
                     <div className="form_feild">
                         <label htmlFor="occasion">Occasion</label>
-                        <select id="occasion" value={occasion} onChange={(e)=>setOccasion(e.target.value)}>
+                        <select id="occasion" value={props.occasion} onChange={(e)=>props.setOccasion(e.target.value)}>
                             <option>Birthday</option>
                             <option>Anniversary</option>
                         </select>

@@ -15,7 +15,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' Component={Main}></Route>
-        <Route path='/reserve' Component={BookingPage}></Route>
+        <Route path='/reserve/*' Component={BookingPage}></Route>
       
 
       </Routes>
