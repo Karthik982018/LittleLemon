@@ -460,6 +460,12 @@ button:hover{
   transition: all 1s;
 }
 
+#error{
+  color: red;
+  font-family: 'Karla', sans-serif;
+  font-size:18pt;
+}
+
 /* media  */
 
 /* media */

@@ -1,4 +1,4 @@
-import About from "./about";
+// import About from "./about";
 import Home from "./home";
 import Specials from "./specials";
 import Tesimonials from "./testimonials";

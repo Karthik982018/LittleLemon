@@ -11,6 +11,12 @@ const BookingPage=(props)=>{
     const [guests,setGuests]=useState(1)
     const [occasion,setOccasion]=useState("Birthday")
 
+
+
+    const [dateRequired,setDateRequired]=useState(true)
+
+    const [timeRequired,setTimeRequired]=useState(true)
+
     
     
 
@@ -38,6 +44,9 @@ const BookingPage=(props)=>{
         setTime("")
         setGuests(1)
         setOccasion("Birthday")
+        
+        setDateRequired(true)
+        setTimeRequired(true)
     }
     return (
         <main   id="reservemain">
@@ -47,7 +56,19 @@ const BookingPage=(props)=>{
             
 
             <Routes>
-                <Route path="/" element={<BookingForm date={date} setDate={setDate} setGuests={setGuests} setOccasion={setOccasion} setTime={setTime} time={time} guests={guests} occasion={occasion} submitForm={submitForm}></BookingForm>}></Route>
+                <Route path="/" element={<BookingForm date={date} 
+                setDate={setDate} 
+                setGuests={setGuests} 
+                setOccasion={setOccasion} 
+                setTime={setTime} time={time}
+                guests={guests}
+                occasion={occasion}
+                submitForm={submitForm} 
+               
+                dateRequired={dateRequired}
+                setDateRequired={setDateRequired}
+                timeRequired={timeRequired}
+                setTimeRequired={setTimeRequired}></BookingForm>}></Route>
                 <Route path="reserve/bookingConfirmation" element={<ConfirmedBooking date={date} time={time} guests={guests} occasion={occasion} resetForm={resetForm} ></ConfirmedBooking>}></Route>
             </Routes>
             
